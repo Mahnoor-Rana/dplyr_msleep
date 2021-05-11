@@ -1,0 +1,15 @@
+fileurl<-download.file("https://raw.githubusercontent.com/genomicsclass/dagdata/master/inst/extdata/msleep_ggplot2.csv",destfile = "D://data2//msleep.csv")
+file.exists("D://data2//msleep.csv")
+msleepData<-read.csv("D://data2//msleep.csv")
+msleepData
+head(msleepData)
+library(dplyr)
+head(msleepData)
+x<-select(msleepData,name,sleep_total)
+head(x)
+#using filter( func)
+y<-filter(msleepData,order=='Carnivora')
+head(y)
+#group_by
+z<-group_by(msleepData,genus)
+levels(groups$genus)
